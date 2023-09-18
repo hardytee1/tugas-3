@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Kalkulator perkalian</h2>
+
+<form id="calculator">
+    <label for="fname">Angka Pertama :</label><br>
+    <input type="text" id="first" name="fname" value=""><br>
+    <label for="lname">Angka Kedua:</label><br>
+    <input type="text" id="second" name="lname" value=""><br><br>
+    <input type="button" value="X" onclick="multiply()">
+    <input type="button" value="/" onclick="divide()">
+    <input type="button" value="+" onclick="add()">
+    <input type="button" value="-" onclick="substract()">
+  </form> 
+
+
+
+<script>
+function multiply() {
+
+let x = document.getElementById('first').value;
+let y = document.getElementById('second').value;
+let z = x * y;
+
+document.getElementById('demo').innerHTML = z;
+}
+function divide() {
+
+let x = document.getElementById('first').value;
+let y = document.getElementById('second').value;
+let z = x / y;
+if (y == 0) {
+    document.getElementById('demo').innerHTML = "tak hingga";
+}
+else{
+document.getElementById('demo').innerHTML = z;
+}
+}
+function add() {
+
+let x = parseInt(document.getElementById('first').value);
+let y = parseInt(document.getElementById('second').value);
+let z = x + y;
+
+document.getElementById('demo').innerHTML = z;
+}
+function substract() {
+
+let x = document.getElementById('first').value;
+let y = document.getElementById('second').value;
+let z = x - y;
+
+document.getElementById('demo').innerHTML = z;
+}
+</script>
+
+
+<p id="demo"></p>
+
+
+
+</body>
+</html> 
